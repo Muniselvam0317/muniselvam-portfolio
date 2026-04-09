@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muniselvam R — Portfolio</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f3;
+      color: #1a1a18;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e0dfd7;
+      overflow: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid #e8e7e0;
+    }
+    .avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: #CECBF6;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 500; color: #3C3489;
+      margin: 0 auto 1rem;
+    }
+    .hero h1 { font-size: 28px; font-weight: 500; letter-spacing: 0.3px; }
+    .tagline { font-size: 15px; color: #666660; margin-top: 6px; }
+    .contact-row {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 10px;
+      margin-top: 1rem;
+    }
+    .contact-chip {
+      font-size: 13px; color: #555550;
+      background: #f5f5f3;
+      border: 1px solid #e0dfd7;
+      border-radius: 8px;
+      padding: 4px 12px;
+    }
+    .contact-chip a { color: #185FA5; text-decoration: none; }
+    .contact-chip a:hover { text-decoration: underline; }
+
+    /* Sections */
+    .section {
+      padding: 1.75rem 2rem;
+      border-bottom: 1px solid #e8e7e0;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-title {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #888780;
+      margin-bottom: 1rem;
+    }
+    .about-text { font-size: 15px; line-height: 1.75; color: #1a1a18; }
+
+    /* Skills */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      font-size: 13px; padding: 5px 14px;
+      border-radius: 99px;
+      border: 1px solid #d0cfe7;
+      color: #3C3489;
+      background: #EEEDFE;
+    }
+    .skill-tag.neutral {
+      background: #f5f5f3;
+      border-color: #d3d1c7;
+      color: #444441;
+    }
+
+    /* Education */
+    .edu-card {
+      background: #fafaf8;
+      border: 1px solid #e8e7e0;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 10px;
+    }
+    .edu-card:last-child { margin-bottom: 0; }
+    .edu-card h3 { font-size: 15px; font-weight: 500; }
+    .edu-card p { font-size: 13px; color: #666660; margin-top: 3px; }
+
+    /* Project */
+    .project-card {
+      background: #fafaf8;
+      border: 1px solid #e8e7e0;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .project-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+    .project-card p { font-size: 14px; color: #555550; line-height: 1.65; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .project-tag {
+      font-size: 12px; padding: 3px 10px;
+      border-radius: 99px;
+      background: #E1F5EE;
+      color: #0F6E56;
+      border: 1px solid #5DCAA5;
+    }
+
+    /* Certificate */
+    .cert-item {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #e8e7e0;
+    }
+    .cert-item:last-child { border-bottom: none; }
+    .cert-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #7F77DD;
+      margin-top: 6px; flex-shrink: 0;
+    }
+    .cert-text { font-size: 14px; color: #1a1a18; line-height: 1.6; }
+
+    /* Languages */
+    .lang-row { display: flex; gap: 10px; }
+    .lang-badge {
+      font-size: 13px; padding: 5px 14px;
+      background: #EEEDFE;
+      border: 1px solid #AFA9EC;
+      color: #3C3489;
+      border-radius: 99px;
+    }
+
+    /* Extras */
+    .extras-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .extra-item {
+      font-size: 13px; padding: 5px 14px;
+      background: #f5f5f3;
+      border: 1px solid #e0dfd7;
+      border-radius: 8px;
+      color: #555550;
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 2rem 1.25rem 1.5rem; }
+      .section { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <div class="avatar">MR</div>
+      <h1>Muniselvam R</h1>
+      <p class="tagline">Fresher &nbsp;·&nbsp; Web Developer &nbsp;·&nbsp; Python &nbsp;·&nbsp; AI Enthusiast</p>
+      <div class="contact-row">
+        <span class="contact-chip">8124256915</span>
+        <span class="contact-chip"><a href="mailto:muniselvam0317@gmail.com">muniselvam0317@gmail.com</a></span>
+        <span class="contact-chip">Bodinayakanur, Theni, Tamil Nadu</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">About me</p>
+      <p class="about-text">
+        I am a motivated fresher with a passion for software development and Artificial Intelligence.
+        I have foundational knowledge in Python and web development technologies (HTML, CSS, JavaScript),
+        and I am eager to continuously learn new technologies and build a strong career in the IT industry.
+      </p>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Technical skills</p>
+      <div class="skills-grid">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag neutral">GitHub</span>
+        <span class="skill-tag neutral">Web Development</span>
+        <span class="skill-tag neutral">IoT (NPTEL)</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Education</p>
+      <div class="edu-card">
+        <h3>Paavai Engineering College</h3>
+        <p>B.Tech — Information Technology &nbsp;·&nbsp; CGPA: 6.86</p>
+      </div>
+      <div class="edu-card">
+        <h3>Z.K.M. Hr. Sec. School</h3>
+        <p>HSC — 62.3% &nbsp;·&nbsp; 2022</p>
+      </div>
+      <div class="edu-card">
+        <h3>Z.K.M. Hr. Sec. School</h3>
+        <p>SSLC — 73.6% &nbsp;·&nbsp; 2020</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Project</p>
+      <div class="project-card">
+        <h3>Sustainable Community Exchange Platform</h3>
+        <p>
+          A web-based platform that enables users to exchange unused items within the community
+          to reduce waste and promote sustainability. The system encourages responsible consumption
+          and supports eco-friendly practices.
+        </p>
+        <div class="project-tags">
+          <span class="project-tag">HTML</span>
+          <span class="project-tag">CSS</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Web Development</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Certificates</p>
+      <div class="cert-item">
+        <div class="cert-dot"></div>
+        <p class="cert-text">NPTEL — Internet of Things (IoT) &nbsp;·&nbsp; 12-week course &nbsp;·&nbsp; Score: 57%</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Languages</p>
+      <div class="lang-row">
+        <span class="lang-badge">Tamil</span>
+        <span class="lang-badge">English</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-title">Extra-curricular</p>
+      <div class="extras-grid">
+        <span class="extra-item">Leadership roles</span>
+        <span class="extra-item">Research projects</span>
+        <span class="extra-item">Football</span>
+        <span class="extra-item">Music</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
